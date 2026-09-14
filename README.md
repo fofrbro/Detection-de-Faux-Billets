@@ -7,12 +7,12 @@ probabilité qu'un billet soit authentique.
 
 ## Contenu
 
-- `P6_01_code.ipynb` : analyse complète, ACP, classification et régression logistique.
-- `P6_02_functions.py` : fonctions réutilisables de visualisation et d'analyse.
-- `notes.csv` : données d'apprentissage contenant 170 billets et 7 variables.
-- `example.csv` : exemple de données à prédire.
-- `P6_03_Exploration_Donnees.html` : rapport d'exploration généré par pandas-profiling.
-- `P6_04_Presentation.pdf` : support de présentation du projet.
+- `analyse_faux_billets.ipynb` : analyse complète, ACP, classification et régression logistique.
+- `fonctions_analyse.py` : fonctions réutilisables de visualisation et d'analyse.
+- `donnees_apprentissage.csv` : données d'apprentissage contenant 170 billets et 7 variables.
+- `donnees_a_predire.csv` : données de billets à prédire.
+- `rapport_exploration_donnees.html` : rapport d'exploration généré par pandas-profiling.
+- `presentation_projet.pdf` : support de présentation du projet.
 
 ## Analyses réalisées
 
@@ -40,24 +40,9 @@ source .venv/bin/activate
 Depuis le dossier du projet :
 
 ```bash
-jupyter notebook P6_01_code.ipynb
+jupyter notebook analyse_faux_billets.ipynb
 ```
 
 Le notebook et les fichiers CSV doivent rester dans le même dossier, car les
 données sont chargées avec des chemins relatifs.
-
-## Publication sur GitHub
-
-Après avoir créé un dépôt vide sur GitHub, exécuter :
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - projet detection de faux billets"
-git branch -M main
-git remote add origin https://github.com/UTILISATEUR/NOM-DU-DEPOT.git
-git push -u origin main
-```
-
-Remplacer `UTILISATEUR/NOM-DU-DEPOT` par l'adresse réelle du dépôt GitHub.
 "# Detection-de-Faux-Billets" 
