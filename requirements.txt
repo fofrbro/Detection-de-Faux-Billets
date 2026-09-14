@@ -1,0 +1,10 @@
+jupyter
+matplotlib
+numpy
+pandas
+pandas-profiling==3.1.1
+plotly
+scikit-learn
+scipy
+seaborn
+statsmodels
