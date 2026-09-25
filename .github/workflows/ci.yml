@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements*.txt
+      - name: Installation des dépendances
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check .
+      - name: Tests
+        run: pytest
+      - name: Entraînement et prédiction en ligne de commande
+        run: |
+          python entrainer.py
+          python predire.py
+      - name: Exécution complète du notebook
+        run: jupyter nbconvert --to notebook --execute analyse_faux_billets.ipynb --output-dir /tmp

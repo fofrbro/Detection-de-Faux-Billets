@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *.pyo
+.pytest_cache/
+.ruff_cache/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -11,10 +13,13 @@ __pycache__/
 venv/
 env/
 
+# Fichiers générés
+modele/
+rapport_exploration_donnees.html
+predictions.csv
+
 # Local tooling
 .vscode/
 .DS_Store
 Thumbs.db
-
-# Generated local files
 *.log
